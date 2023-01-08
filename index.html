@@ -21,13 +21,13 @@
         <a class="header__logo link" href="./index.html">Web<span class="header__logo-part">Studio</span></a>
         <ul class="header__menu">
           <li>
-            <a class="link header__menu-item" href="agencja">Agencja</a>
+            <a class="link header__menu-item agencja" href="agencja">Agencja</a>
           </li>
           <li>
             <a class="link header__menu-item" href="./portfolio.html">Porfolio</a>
           </li>
           <li>
-            <a class="link header__menu-item" href="kontakt">Kontakt</a>
+            <a class="link header__menu-item kontakt" href="kontakt">Kontakt</a>
           </li>
         </ul>
       </nav>
@@ -116,12 +116,21 @@
         <ul class="offices">
           <li class="office">
             <img src="./images/box1.jpg" alt="Programista koduje" width="370" height="294" />
+            <div class="office__label__background">
+              <p class="office__label">aplikacje komputerowe</p>
+            </div>
           </li>
           <li class="office">
             <img src="./images/box2.jpg" alt="Pogramista pisze aplikacje na telefon" width="370" height="294" />
+            <div class="office__label__background">
+              <p class="office__label">aplikacje mobilne</p>
+            </div>
           </li>
           <li class="office">
             <img src="./images/box3.jpg" alt="Programista używa aplikacji" width="370" height="294" />
+            <div class="office__label__background">
+              <p class="office__label">rozwiązania graficzne</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -390,7 +399,7 @@
       </div>
     </div>
   </footer>
-  <div class="backdrop is-hidden" data-modal>
+  <div class="backdrop is-hidden " data-modal>
     <div class="modal">
       <button data-modal-close class="close__btn" type="button">X</button>
     </div>
