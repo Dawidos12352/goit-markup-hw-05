@@ -124,6 +124,7 @@ button:active {
     0 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border-style: hidden;
+  transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -202,6 +203,8 @@ button:active {
 .gallery__product:hover .product__label,
 .product__label:focus {
   transform: translateY(0);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*footer*/
@@ -475,6 +478,12 @@ button:active {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+.close__btn:hover,
+.close__btn:focus .close__btn:active {
+  transform: rotate(720deg);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .backdrop {
   position: fixed;
   left: 0;
@@ -482,49 +491,31 @@ button:active {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 528px;
   min-height: 581px;
   background-color: var(--brand-color2);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
+  transition-property: visibility, opacity, scale, transform;
   transform: translate(-50%, -50%) scale(1);
-  /*
-  opacity: 1;
-  transition-property: visibility, opacity, transform;
-  transition: duration 2s; ;
-  transform: translateX(-50%) translateY(-50%) scale(1) rotate(720deg) skew(0deg, 0deg);
-  opacity: 1;
-  visibility: visible;
-  display: block;
-  z-index: 1;
-  */
-  animation-name: modal-open;
-  animation-duration: 1500ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  animation: modal-open 3s;
 }
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
-    skew(40deg, 40deg);
 }
-/*
-.modal-close {
-  animation-duration: 3s;
-  transform: translateX(-50%) translateY(-50%) scale(1) rotate(0deg)
-    skew(40deg, 40deg);
-}
-*/
-.modal-open--animated {
+
+.modal-open {
   animation-play-state: running;
 }
 

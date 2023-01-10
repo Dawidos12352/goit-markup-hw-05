@@ -59,7 +59,12 @@
           efektywne rozwiązania <br />
           dla waszego biznesu
         </h1>
-        <button data-modal-open class="open__btn" type="button">Zamów usługę</button>
+        <button class="open__btn" type="button" data-modal-open>Zamów usługę</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="close__btn modal-close" type="button" data-modal-close>X</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -399,11 +404,12 @@
       </div>
     </div>
   </footer>
-  <div class="backdrop is-hidden " data-modal>
-    <div class="modal">
-      <button data-modal-close class="close__btn" type="button">X</button>
-    </div>
-  </div>
+
+
+
+
+
+
   <script src="./js/modal.js"></script>
 </body>
 
