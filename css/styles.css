@@ -72,7 +72,6 @@ p {
 .header__contacts {
   display: flex;
   align-items: center;
-  padding: auto;
 }
 .header__contacts > li:not(:last-child) {
   margin-right: 50px;
@@ -139,7 +138,7 @@ button:active {
   margin-right: 8px;
 }
 .menu__btn-item > button {
-  padding: 6px 22px 6px 22px;
+  padding: 6px 22px;
 }
 .gallery {
   display: flex;
@@ -149,10 +148,9 @@ button:active {
   margin-top: 50px;
 }
 .product__box {
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 20px 24px 20px 24px;
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 20px 24px;
   position: relative;
   background-color: var(--brand-color2);
 }
@@ -286,14 +284,14 @@ button:active {
   background-color: var(--background-color);
   align-items: center;
   text-align: center;
-  padding: 200px 15px 200px 15px;
+  padding: 200px 15px;
   background-image: linear-gradient(
       to top,
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 80%
     ),
     url("../images/banner-background.jpg");
-  background-size: 1600px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
